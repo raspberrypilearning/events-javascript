@@ -1,24 +1,24 @@
-In order to trigger any JavaScript functions you have written you might want to use **events**
+Afin de déclencher toutes les fonctions JavaScript que tu as écrites, tu pourrais utiliser **events**
 
-Events can be triggered by the user or the browser.
+Les événements peuvent être déclenchés par l'utilisateur ou le navigateur.
 
-- User events:
-  - Mouse events (click, double click, mouseover).
-  - Keyboard events (keypress, keydown, keyup).
-  - Touch events (touchstart, touchmove, touchend).
+- Évènements utilisateur :
+  - Événements de la souris (clic, double clic, souris).
+  - Événements du clavier (appui sur une touche, enfoncement d'une touche, relâchement d'une touche).
+  - Événements tactiles (touchstart, touchmove, touchend).
 
-- Browser events:
-  - Page load events (load, unload).
-  - Window events (resize, scroll).
-  - Time events (setInterval, setTimeout).
+- Événements du navigateur :
+  - Événements de chargement de page (chargement, déchargement).
+  - Evénements de la fenêtre (redimensionnement, défilement).
+  - Événements temporels (setInterval, setTimeout).
 
-The simplest way to do this is by making a button and adding an `onclick` attribute to it.
+La façon la plus simple de le faire est de créer un bouton et d'y ajouter un attribut `onclick`.
 
-In the **Comic character** project you used a button to trigger a function that displayed a summary of the user's character.
+Dans le projet **Personnage de Comics**, tu as utilisé un bouton pour déclencher une fonction qui affichait un résumé du personnage de l'utilisateur.
 
-Add a `<button>` element with the event `onclick="displaySummary()"`
+Ajoute un élément `<button>` avec l'événement `onclick="displaySummary()"`
 
-Add the text 'Create' to the `<button>`, so the user knows what the button does.
+Ajoute le texte 'Créer' au `<button>`, afin que l'utilisateur sache ce que fait le bouton.
 
 ## --- code ---
 
@@ -27,17 +27,17 @@ filename:
 line_numbers: false
 --------------------------------------------------------
 
-<button onclick="displaySummary()">Create</button>
+<button onclick="displaySummary()">Créer</button>
 
 \--- /code ---
 
-**Tip:** change the function to whatever function you want to use when the user clicks your button, also update the text so the user knows what the button will do.
+**Astuce :** change la fonction pour n'importe quelle fonction que tu veux utiliser lorsque l'utilisateur clique sur ton bouton, mets aussi à jour le texte pour que l'utilisateur sache ce que le bouton fera.
 
-**Using other events**
+**Utiliser d'autres événements**
 
-In **Comic Character** you also used the `DOMContentLoaded` event to trigger code when the page loads.
+Dans **Personnage de Comics** tu as également utilisé l'événement `DOMContentLoaded` pour déclencher du code lors du chargement de la page.
 
-Use `.addEventListener` like this:
+Utilise `.addEventListener` comme ceci :
 
 ## --- code ---
 
@@ -52,9 +52,9 @@ element.addEventListener(eventType, callbackFunction);
 
 \--- /code ---
 
-- element: The HTML element to which you want to attach the event listener.
-- eventType: The type of event you want to listen for (e.g. "click", "keydown", "DOMContentLoaded").
-- callbackFunction: The function to be executed when the event happens.
+- element : l'élément HTML auquel tu veux attacher l'event listener.
+- eventType : le type d'événement que tu veux recevoir l'entrée (par exemple "click", "keydown", "DOMContentLoaded").
+- callbackFunction : la fonction à exécuter lorsque l'événement se produit.
 
 ## --- code ---
 
@@ -65,7 +65,7 @@ line_number_start: 65
 line_highlights: 69
 --------------------------------------------------------
 
-// Check local storage
+// Vérifier le stockage local
 document.addEventListener("DOMContentLoaded", function () {
 
 if (localStorage.getItem("lightMode") == "true") {
