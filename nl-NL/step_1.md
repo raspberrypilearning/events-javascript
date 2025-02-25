@@ -1,24 +1,24 @@
-In order to trigger any JavaScript functions you have written you might want to use **events**
+Om JavaScript-functies te activeren die je geschreven hebt, kun je **events** gebruiken
 
-Events can be triggered by the user or the browser.
+Events (gebeurtenissen) kunnen worden geactiveerd door de gebruiker of de browser.
 
-- User events:
-  - Mouse events (click, double click, mouseover).
-  - Keyboard events (keypress, keydown, keyup).
-  - Touch events (touchstart, touchmove, touchend).
+- Gebruikers events:
+  - Met de muis (klik, dubbele klik, muis eroverheen bewegen).
+  - Met het toetsenbord (toetsaanslag, toetsomlaag, toetsomhoog).
+  - Door aanrakingen (touchstart, touchmove, touchend).
 
 - Browser events:
-  - Page load events (load, unload).
-  - Window events (resize, scroll).
-  - Time events (setInterval, setTimeout).
+  - Het laden van de pagina (load, unload).
+  - Venster gebeurtenissen (formaat wijzigen, scrollen).
+  - Tijdgebeurtenissen (setInterval, setTimeout).
 
-The simplest way to do this is by making a button and adding an `onclick` attribute to it.
+De eenvoudigste manier om dit te doen is door een knop te maken en er een `onclick`-attribuut aan toe te voegen.
 
-In the **Comic character** project you used a button to trigger a function that displayed a summary of the user's character.
+In het project **Stripfiguur** gebruikte je een knop om een functie te activeren die een samenvatting van het personage van de gebruiker weergaf.
 
-Add a `<button>` element with the event `onclick="displaySummary()"`
+Voeg een `<button>`-element toe met de gebeurtenis `onclick="displaySummary()"`
 
-Add the text 'Create' to the `<button>`, so the user knows what the button does.
+Voeg de tekst 'Maken' toe aan `<button>`, zodat de gebruiker weet wat de knop doet.
 
 ## --- code ---
 
@@ -27,17 +27,17 @@ filename:
 line_numbers: false
 --------------------------------------------------------
 
-<button onclick="displaySummary()">Create</button>
+<button onclick="displaySummary()">Maken</button>
 
 \--- /code ---
 
-**Tip:** change the function to whatever function you want to use when the user clicks your button, also update the text so the user knows what the button will do.
+**Tip:** Wijzig de functie naar de functie die je wilt gebruiken wanneer de gebruiker op jouw knop klikt, werk ook de tekst bij, zodat de gebruiker weet wat de knop doet.
 
-**Using other events**
+**Andere events gebruiken**
 
-In **Comic Character** you also used the `DOMContentLoaded` event to trigger code when the page loads.
+In **Stripfiguurr** heb je ook de gebeurtenis `DOMContentLoaded` gebruikt om code te activeren wanneer de pagina wordt geladen.
 
-Use `.addEventListener` like this:
+Gebruik `.addEventListener` zoals hier:
 
 ## --- code ---
 
@@ -52,9 +52,9 @@ element.addEventListener(eventType, callbackFunction);
 
 \--- /code ---
 
-- element: The HTML element to which you want to attach the event listener.
-- eventType: The type of event you want to listen for (e.g. "click", "keydown", "DOMContentLoaded").
-- callbackFunction: The function to be executed when the event happens.
+- element: Het HTML-element waaraan je de event listener wilt koppelen.
+- eventType: Het type event waar je naar wilt luisteren (bijv. "click", "keydown", "DOMContentLoaded").
+- callbackFunction: De functie die moet worden uitgevoerd wanneer de gebeurtenis plaatsvindt.
 
 ## --- code ---
 
@@ -65,7 +65,7 @@ line_number_start: 65
 line_highlights: 69
 --------------------------------------------------------
 
-// Check local storage
+// Controleer lokale opslag
 document.addEventListener("DOMContentLoaded", function () {
 
 if (localStorage.getItem("lightMode") == "true") {
