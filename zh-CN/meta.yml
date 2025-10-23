@@ -1,0 +1,10 @@
+---
+title: 使用事件触发 JavaScript 代码
+hero_image: images/banner.png
+description: 使用事件触发 JavaScript 代码
+version: 4
+listed: false
+copyedit: false
+last_tested: "2022-05-19"
+steps:
+  - title: 在 JavaScript 中使用事件
